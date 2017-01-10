@@ -6,4 +6,5 @@
 * Innovation
 * sports
 * Myhtology
+* Education(Mathematics, Sankskrit)
 
