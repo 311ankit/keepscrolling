@@ -1,0 +1,4 @@
+Ankit:
+1) mirror Question Code
+2) vertical traversing of tree 
+3) top view of a tree
