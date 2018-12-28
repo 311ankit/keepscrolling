@@ -1,0 +1,43 @@
+package stringTransfomr;
+import java.util.*;
+
+public class canTransform {
+
+	static boolean CanTransform(String strA, String strB) {
+		  HashMap<Character, Character> hm = new HashMap<Character, Character>();
+		  char cA;
+		  char cB;
+		   
+		  // **** check if lengths do NOT match ****
+		  if (strA.length() != strB.length()) 
+		   return false;
+		   
+		  // **** traverse the input string checking the output string ****
+		  for (int i = 0; i < strA.length(); i++) {
+		      
+		   // **** current character from first string ****
+		   cA = strA.charAt(i);
+		   
+		   // **** check if already mapped ****
+		   if (hm.containsKey(cA)) {
+		    
+		    // **** check if mapping is incorrect ****
+		    if (hm.get(cA) != strB.charAt(i))
+		     return false;
+		   }
+		   
+		   // **** NOT mapped ****
+		   else {
+		    cB = strB.charAt(i);
+		    hm.put(cA, cB);
+		   }
+		  }
+
+		  // **** can transform ****
+		  return true;
+		 }
+	public static void main(String args[]) {
+		System.out.println(CanTransform("abca", "dced"));
+}
+
+}
